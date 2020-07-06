@@ -164,6 +164,23 @@ p {
   max-width: 1280px;
   padding: 67px 104px 10px 128px;
 }
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header__logo-text {
+  margin-top: -20px;
+  font-size: 9px;
+  color: #ffffff;
+}
 .header__img {
   width: 162px;
 }
@@ -176,6 +193,12 @@ p {
 }
 .header__phone-text {
   margin-top: 0;
+}
+.header__phone-text--white {
+  color: #ffffff;
+}
+.header__phone--white {
+  color: #ffffff;
 }
 .header__phone:hover {
   opacity: 0.7;
@@ -230,6 +253,10 @@ p {
 .first-screen__wrapper--second {
   background-image: none;
   background-color: #04AFAA;
+}
+.first-screen__wrapper--dark-green {
+  background-image: none;
+  background-color: #00807C;
 }
 .first-screen__choice {
   margin-left: -50px;
@@ -294,7 +321,7 @@ p {
 }
 .general--third {
   border-radius: 0;
-  background-color: #04AFAA;
+  background-color: #00807C;
   background-image: url("../img/urology-bg.png");
   background-size: 100%;
 }
@@ -391,6 +418,7 @@ p {
   }
 }
 .choice {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,6 +435,19 @@ p {
 .choice--second {
   background-color: #00807C;
 }
+.choice--light-green {
+  background-color: #04AFAA;
+}
+.choice::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -90px;
+  width: 90px;
+  height: 110px;
+  background-color: #B5BFC9;
+  border-radius: 120px 0 0 0;
+}
 .choice__gender {
   width: 111px;
   min-height: 151px;
@@ -420,7 +461,7 @@ p {
   background-size: 50%;
 }
 .choice__gender--male:hover {
-  background-size: 55%;
+  background-image: url(../img/male-active.png);
   color: #dddddd;
 }
 .choice__gender--male:active {
@@ -436,7 +477,7 @@ p {
   background-size: 40%;
 }
 .choice__gender--female:hover {
-  background-size: 44%;
+  background-image: url(../img/female-active.png);
   color: #dddddd;
 }
 .choice__gender--female:active {
@@ -454,6 +495,9 @@ p {
     min-height: 70px;
     padding-left: 108px;
     border-radius: 0;
+  }
+  .choice::before {
+    display: none;
   }
   .choice__gender {
     width: 156px;
@@ -1390,6 +1434,21 @@ p {
 }
 .footer__logo {
   width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.footer__logo-text {
+  margin-top: -20px;
+  font-size: 9px;
+  color: #00807C;
 }
 .footer__tel {
   margin-top: 35px;
@@ -1451,6 +1510,9 @@ p {
 .footer__day:not(:nth-child(5)) {
   margin-right: 4px;
 }
+.footer__time {
+  margin-top: 10px;
+}
 .footer__link {
   margin-top: 27px;
 }
@@ -1468,7 +1530,8 @@ p {
 }
 .footer__show-price:hover {
   color: #434242;
-  background-color: lightgrey;
+  background-color: #ffffff;
+  border: solid 1px #40494F;
 }
 .footer__show-price:active {
   opacity: 0.7;
@@ -1494,10 +1557,14 @@ p {
       justify-content: space-around;
 }
 .footer__social-item {
+  display: block;
   width: 35px;
   height: 35px;
   background-size: 100%;
   cursor: pointer;
+}
+.footer__social-item a {
+  display: block;
 }
 .footer__social-item:hover {
   opacity: 0.6;
@@ -1521,11 +1588,12 @@ p {
   margin-left: -140px;
   color: #434242;
   border: solid 1px #40494F;
+  background-color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
 }
 .footer__map-link:hover {
-  background-color: #434242;
+  background-color: #40494F;
   color: #ffffff;
 }
 .footer__map-link:active {
@@ -1573,6 +1641,9 @@ p {
 }
 .menu {
   background-color: #00807C;
+}
+.menu--urology {
+  background-color: #04AFAA;
 }
 .menu__list {
   display: -webkit-box;
@@ -1627,6 +1698,8 @@ p {
   margin-left: 135px;
 }
 .content__subtitle {
+  font-family: "GothamProBold", "Arial", sans-serif;
+  font-weight: bold;
   margin-top: 10px;
   margin-left: 135px;
   color: #ffffff;
@@ -1688,36 +1761,66 @@ p {
   padding-top: 50px;
   padding-right: 40px;
   background-position: top left;
-  background-size: 450px 320px;
+  background-size: 430px 320px;
   background-color: #ffffff;
   color: #434242;
 }
 .content__description p {
   font-size: 14px;
 }
+.content__description--disease-1 {
+  background-image: url("../img/gynecology6.jpg");
+}
+.content__description--disease-1--urology {
+  background-image: url("../img/urology6.jpg");
+}
+.content__description--disease-2 {
+  background-image: url("../img/gynecology1.jpg");
+}
+.content__description--disease-2--urology {
+  background-image: url("../img/urology1.jpg");
+}
+.content__description--disease-3 {
+  background-image: url("../img/gynecology2.jpg");
+}
+.content__description--disease-3--urology {
+  background-image: url("../img/urology2.jpg");
+}
+.content__description--disease-4 {
+  background-image: url("../img/gynecology3.jpg");
+}
+.content__description--disease-4--urology {
+  background-image: url("../img/urology3.jpg");
+}
+.content__description--disease-5 {
+  background-image: url("../img/gynecology4.jpg");
+}
+.content__description--disease-5--urology {
+  background-image: url("../img/urology4.jpg");
+}
+.content__description--disease-6 {
+  background-image: url("../img/gynecology5.jpg");
+}
+.content__description--disease-6--urology {
+  background-image: url("../img/urology5.jpg");
+}
 .radio-disease-1:checked ~ .content__description--disease-1 {
   display: block;
-  background-image: url("../img/disease-bg-m.png");
 }
 .radio-disease-2:checked ~ .content__description--disease-2 {
   display: block;
-  background-image: url("../img/disease-bg2.png");
 }
 .radio-disease-3:checked ~ .content__description--disease-3 {
   display: block;
-  background-image: url("../img/disease-bg.png");
 }
 .radio-disease-4:checked ~ .content__description--disease-4 {
   display: block;
-  background-image: url("../img/disease-bg2.png");
 }
 .radio-disease-5:checked ~ .content__description--disease-5 {
   display: block;
-  background-image: url("../img/disease-bg.png");
 }
 .radio-disease-6:checked ~ .content__description--disease-6 {
   display: block;
-  background-image: url("../img/disease-bg2.png");
 }
 .radio-disease-1:checked ~ .content__list li:first-child {
   background-image: url("../img/triangle.png");
@@ -1805,6 +1908,9 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+.content__text--left {
+  margin-left: 135px;
+}
 .content__form-wrapper {
   width: 82%;
   margin-top: 50px;
@@ -1833,6 +1939,9 @@ p {
   .content__text {
     width: 680px;
   }
+  .content__text-left {
+    margin-right: 5%;
+  }
 }
 @media screen and (max-width: 767px) {
   .content__disease {
@@ -1848,6 +1957,9 @@ p {
   }
   .content__text {
     width: 90%;
+  }
+  .content__text--left {
+    margin-left: 5%;
   }
   .content__line {
     width: 70%;
@@ -1907,6 +2019,7 @@ p {
 }
 .doctors__image {
   width: 130px;
+  height: 130px;
 }
 .doctors__text {
   padding-left: 10px;

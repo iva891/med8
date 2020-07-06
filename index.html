@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="page">
@@ -16,9 +17,10 @@
     <div class="header__wrapper center">
       <div class="header__logo">
         <img src="img/logo.png" alt="Логотип" class="header__img">
+        <p class="header__logo-text">клиника урологии<br>и гинекологии «МедЭйт»</p>
       </div>
       <div class="header__call">
-        <a href="" class="header__phone text-20-bold">8 (800) 123-4-567</a>
+        <a href="tel:88001234567" class="header__phone text-20-bold">8 (800) 123-4-567</a>
         <p class="header__phone-text">Бесплатно по России</p>
       </div>
     </div>
@@ -27,7 +29,7 @@
   <main class="page__main main">
     <section class="main__first-screen first-screen">
       <div class="first-screen__wrapper center">
-        <div class="first-screen__general general">
+        <div class="first-screen__general general" id="general">
           <h1 class="general__title title">Клиника урологии и гинекологии</h1>
           <p class="general__subtitle subtitle ">Европейского уровня в Москве</p>
           <button class="general__sign btn" id="myBtn">записаться на прием</button>
@@ -42,7 +44,7 @@
           </form>
         </div>
         <div class="first-screen__choice choice">
-          <a href="#" class="choice__gender choice__gender--male">мужчинам</a>
+          <a href="urology.html" class="choice__gender choice__gender--male">мужчинам</a>
           <a href="gynecology.html" class="choice__gender choice__gender--female">женщинам</a>
         </div>
       </div>
@@ -54,14 +56,14 @@
           <p class="consult__subtitle title title--green">Позаботьтесь о своем<br>здоровье сейчас</p>
         </div>
         <ul class="consult__page-nav page-nav">
-          <li class="page-nav__item">Запись</li>
-          <li class="page-nav__item">О клинике</li>
-          <li class="page-nav__item">Услуги</li>
-          <li class="page-nav__item">Преимущества</li>
+          <li class="page-nav__item"><a href="#general">Запись</a></li>
+          <li class="page-nav__item"><a href="#advantages">О клинике</a></li>
+          <li class="page-nav__item"><a href="#services">Услуги</a></li>
+          <li class="page-nav__item"><a href="#benefits">Преимущества</a></li>
           <li class="page-nav__item"><a href="urology.html">Урология</a></li>
           <li class="page-nav__item"><a href="gynecology.html">Гинекология</a></li>
-          <li class="page-nav__item">Наши врачи</li>
-          <li class="page-nav__item">Контакты</li>
+          <li class="page-nav__item"><a href="gynecology.html#doctors">Наши врачи</a></li>
+          <li class="page-nav__item"><a href="#footer">Контакты</a></li>
         </ul>
 
         <form action="" class="consult__form form form--vertical">
@@ -78,7 +80,7 @@
     </section>
     <section class="main__advantages advantages">
       <div class="advantages__screen-header screen-header">
-        <h2 class="screen-header__title">передовые методы лечения и профилактики</h2>
+        <h2 class="screen-header__title" id="advantages">передовые методы лечения и профилактики</h2>
         <div class="screen-header__line"></div>
       </div>
       <div class="advantages__wrapper center">
@@ -145,13 +147,13 @@
         </div>
         <div class="place__map">
           <p class="place__metro">Новокузнецкая</p>
-          <a href="" class="place__ya-map">смотреть на Яндекс.Картах</a>
+          <a href="https://yandex.ru/maps/-/CKBF5VpF" target="_blank"class="place__ya-map">смотреть на Яндекс.Картах</a>
         </div>
       </div>
     </section>
     <section class="main__services services">
       <div class="services__screen-header screen-header">
-        <h2 class="screen-header__title screen-header__title--green">услуги</h2>
+        <h2 class="screen-header__title screen-header__title--green" id="services">услуги</h2>
         <div class="screen-header__line screen-header__line--green"></div>
       </div>
       <div class="services__wrapper">
@@ -225,7 +227,7 @@
     <section class="main__benefits benefits">
       <div class="benefits__screen-header screen-header">
         <div class="screen-header__line screen-header__line--green"></div>
-        <h2 class="screen-header__title screen-header__title--center screen-header__title--green">высокое качество обслуживания каждый день
+        <h2 class="screen-header__title screen-header__title--center screen-header__title--green" id="benefits">высокое качество обслуживания каждый день
         </h2>
         <div class="screen-header__line screen-header__line--green"></div>
       </div>
@@ -324,13 +326,14 @@
     </section>
   </main>
 
-  <footer class="page__footer footer">
+  <footer class="page__footer footer" id="footer">
     <div class="footer__wrapper">
       <div class="footer__contact">
         <div class="footer__logo">
           <img src="img/footer-logo.png" alt="Мед Эйт" class="footer__img">
+          <p class="footer__logo-text">клиника урологии<br>и гинекологии «МедЭйт»</p>
         </div>
-        <a href="" class="footer__tel">8 800 123 45 67</a>
+        <a href="tel:88001234567" class="footer__tel">8 800 123 45 67</a>
         <a href="" class="footer__mail">e-mail</a>
       </div>
       <div class="footer__description">
@@ -351,11 +354,11 @@
       </div>
       <div class="footer__social">
         <ul class="footer__social-list">
-            <li class="footer__social-item footer__social-item--fb"></li>
-            <li class="footer__social-item footer__social-item--insta"></li>
-            <li class="footer__social-item footer__social-item--vk"></li>
+            <li><a href="https://www.facebook.com/" target="_blank" class="footer__social-item footer__social-item--fb"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="footer__social-item footer__social-item--insta"></a></li>
+            <li><a href="https://vk.com/" target="_blank" class="footer__social-item footer__social-item--vk"></a></li>
           </ul>
-        <a href="" class="footer__link--map"><button class="footer__map-link">смотреть в Яндекс Картах</button></a>
+        <a href="https://yandex.ru/maps/-/CKBF5VpF" target="_blank" class="footer__link--map"><button class="footer__map-link">смотреть в Яндекс Картах</button></a>
       </div>
     </div>
   </footer>
