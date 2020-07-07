@@ -37,3 +37,27 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
 }
+
+var modal1 = document.getElementById("mobMenu");
+
+var btn1 = document.getElementById("mobBtn");
+
+var span1 = document.getElementsByClassName("closed")[0];
+
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+modal1.onclick = function() {
+    modal1.style.display = "none";
+  }
+
+window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+}

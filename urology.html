@@ -15,17 +15,31 @@
 
   <header class="page__header header">
     <div class="header__wrapper center">
-        <a href="index.html">
             <div class="header__logo">
+              <a href="index.html">
               <img src="img/logo.png" alt="Логотип" class="header__img">
               <p class="header__logo-text">клиника урологии<br>и гинекологии «МедЭйт»</p>
+              </a>
             </div>
-        </a>
         <div class="header__call">
           <a href="tel:88001234567" class="header__phone header__phone--white text-20-bold">8 (800) 123-4-567</a>
           <p class="header__phone-text header__phone-text--white">Бесплатно по России</p>
           </div>
+          <div class="header__sandwich header__sandwich--white" id="mobBtn"></div>
       </div>
+      <div class="header__mobile-menu mobile-menu" id="mobMenu">
+        <div class="mobile-menu__wrapper">
+          <span class="mobile-menu__closed closed">&times;</span>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a href="index.html#general">О клинике</a></li>
+            <li class="mobile-menu__item"><a href="#doctors">Врачи</a></li>
+            <li class="mobile-menu__item"><a href="index.html#services">Цены</a></li>
+            <li class="mobile-menu__item"><a href="#footer">Контакты</a></li>
+            <li class="mobile-menu__item">Лицензия</li>
+            <li class="mobile-menu__item"><a href="#ask">Спросить</a></li>
+          </ul>
+        </div>
+      </div>  
     </header>
 
   <main class="page__main main">
@@ -143,7 +157,7 @@
         <div class="content__line"></div>
         <p class="content__text">Диагностика и лечение урологических заболеваний проходит в строгом соответствии с протоколами, одобренными Министерством здравоохранения РФ. Чтобы получить квалифицированную медицинскую помощь, вам не придется стоять в очереди и ожидать приема долгие недели. В «МедЭйт» вы получите качественное и быстрое обслуживание.
             </p>
-        <div class="content__form-wrapper">
+        <div class="content__form-wrapper" id="ask">
             <form action="" class="content__form form form--long">
                 <p class="form__title">Спросите, если остались вопросы</p>
                 <div class="form__wrapper">
