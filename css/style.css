@@ -105,6 +105,7 @@
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid red;
   outline-offset: -1px;
   background-repeat: no-repeat;
 }
@@ -400,6 +401,7 @@ p {
   }
   .general__subtitle {
     margin-left: 5%;
+    margin-right: 5%;
   }
   .general__sign {
     margin-left: auto;
@@ -703,6 +705,9 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .form__title {
+    text-align: center;
+  }
   .form__item {
     width: 205px;
     margin-bottom: 10px;
@@ -715,6 +720,10 @@ p {
     width: 94%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .form__warning {
+    text-align: center;
+    font-size: 9px;
   }
 }
 .btn {
@@ -741,6 +750,12 @@ p {
 .btn:focus {
   border: solid 2px #ffffff;
   outline: none;
+}
+@media (max-width: 767px) {
+  .btn--services {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .consult {
   width: 100%;
@@ -824,8 +839,8 @@ p {
   }
   .consult__content {
     padding-left: 5%;
-    background-size: auto 100%;
-    min-height: 203px;
+    background-size: 100%;
+    min-height: 255px;
     width: auto;
     background-image: url("../img/consult-bg-mobile.png");
     border-radius: 0;
@@ -947,6 +962,9 @@ p {
   background-color: #00807C;
 }
 @media (max-width: 767px) {
+  .screen-header {
+    margin-left: 5%;
+  }
   .screen-header__title {
     font-size: 20px;
   }
@@ -971,6 +989,11 @@ p {
 @media screen and (max-width: 1200px) {
   .advantages {
     padding-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .advantages__screen-header {
+    margin-top: -92px;
   }
 }
 .article {
@@ -1046,13 +1069,19 @@ p {
     margin-bottom: 15px;
   }
   .article__wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     min-height: 300px;
     margin-top: 155px;
-    padding-top: 0px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
     border: solid 1px #ffffff;
+  }
+  .article__text {
+    margin-bottom: 10px;
   }
   .article:not(:last-child) {
     margin-right: 0;
@@ -1116,7 +1145,7 @@ p {
 .place__doctor-item::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
   width: 28px;
   height: 18px;
@@ -1125,7 +1154,7 @@ p {
 .place__doctor-item::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 0;
   left: 8px;
   width: 12px;
   height: 7px;
@@ -1171,7 +1200,7 @@ p {
 @media screen and (max-width: 767px) {
   .place__doctor-list {
     min-height: 230px;
-    width: 80%;
+    width: 86%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1239,7 +1268,10 @@ p {
 }
 @media screen and (max-width: 767px) {
   .services__show-all {
-    margin-left: -2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
   }
   .services__price {
     font-size: 9px;
@@ -1386,6 +1418,9 @@ p {
     font-size: 13px;
   }
 }
+.reviews__screen-header {
+  margin-top: 30px;
+}
 .reviews__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1420,9 +1455,17 @@ p {
   font-size: 13px;
   color: #434242;
 }
+.reviews__text {
+  margin-top: 5px;
+}
 .reviews__author {
   margin-top: 30px;
   color: #04AFAA;
+}
+@media screen and (max-width: 767px) {
+  .reviews__wrapper {
+    width: 86%;
+  }
 }
 .feedback {
   width: 82%;
@@ -1549,7 +1592,7 @@ p {
   display: block;
   width: 175px;
   min-height: 38px;
-  background-color: #40494F;
+  background-color: #434242;
   color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
@@ -1557,7 +1600,7 @@ p {
 .footer__show-price:hover {
   color: #434242;
   background-color: #ffffff;
-  border: solid 1px #40494F;
+  border: solid 1px #434242;
 }
 .footer__show-price:active {
   opacity: 0.7;
@@ -1613,13 +1656,13 @@ p {
   min-height: 38px;
   margin-left: -140px;
   color: #434242;
-  border: solid 1px #40494F;
+  border: solid 1px #434242;
   background-color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
 }
 .footer__map-link:hover {
-  background-color: #40494F;
+  background-color: #434242;
   color: #ffffff;
 }
 .footer__map-link:active {
